@@ -142,7 +142,6 @@ for x in range(100):
     t.start()
 
 ippuerto = 0
-cantpuertos = input("Cantidad de Puertos: ")
 
 while True:
     try:
