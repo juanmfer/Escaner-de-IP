@@ -142,9 +142,18 @@ for x in range(100):
     t.start()
 
 ippuerto = 0
+cantpuertos = input("Cantidad de Puertos: ")
+
+while True:
+    try:
+        cantpuertos = int(input("Cantidad de Puertos: "))
+        break
+    except ValueError:
+        continue
+
 while ippuerto < ipspinglista:
     pasoip = lista2ping[ippuerto]
-    for trabajador in range(1, 500):
+    for trabajador in range(1, cantpuertos):
         queu1.put(trabajador, pasoip)
     ippuerto += 1
     queu1.join()
